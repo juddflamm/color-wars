@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app="ColorWars">
+<head>
+  <meta charset="utf-8">
+  <title>Color Wars</title>
+  <link rel="stylesheet" href="css/app.css">
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+  <script src="//cdn.firebase.com/v0/firebase.js"></script>
+  <script src="//cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body ng-controller="Main">
+
+  <div id="winnerMessage">
+    White: {{score()['White']}}<br>
+    Yellow: {{score()['Yellow']}}
+  </div>
+
+  <div id="wrapper">
+    <div ng-repeat="bitId in bitIds | orderBy:'toString()'" ng-style="calcBitStyle(bitId)" ng-click="onClickBit(bitId)" class="bit">&nbsp;</div>
+  </div>
+
+</body>
+</html>

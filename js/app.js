@@ -2,13 +2,14 @@
 
 var app = angular.module('ColorWars', ['firebase']);
 
-app.controller('Main', function($scope, $firebase) {
+app.controller('Main', function($scope, $firebaseObject) {
 
   $scope.bitIdsSource = ['a0','a1','a2','a3','b0','b1','b2','b3','c0','c1','c2','c3','d0','d1','d2','d3'];
   $scope.bitIds = [];
 
   var firebaseRef = new Firebase("https://colorwars.firebaseio.com/");
-  $firebase(firebaseRef).$bind($scope, "bitMap").then(function(){
+  var firebaseObj = $firebaseObject(firebaseRef);
+  firebaseObj.$bindTo($scope, "bitMap").then(function(){
     //This puts the list of square bitIds in the right variable for the ng-repeat, but not until after the data is retrieved
     $scope.bitIds = $scope.bitIdsSource;
   });

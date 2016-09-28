@@ -1,3 +1,15 @@
-<h1>
-  {{title}}
-</h1>
+<div id="scoreBoard">
+  White: {{scoreWhite}}<br>
+  Yellow: {{scoreYellow}}
+</div>
+
+<div id="wrapper">
+  <div
+    *ngFor="let square of squares | async"
+    [style.background]="square.color"
+    (click)="squareClicked(square)"
+    class="square"
+  >
+    &nbsp;
+  </div>
+</div>

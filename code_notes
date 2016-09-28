@@ -1,0 +1,83 @@
+squares: FirebaseListObservable<any[]>;
+constructor(af: AngularFire) {
+  this.squares = af.database.list("/");
+}
+
+
+<div id="wrapper">
+  <div
+    *ngFor="let square of squares | async"
+    [style.background]="square.color"
+    class="square"
+  >
+    &nbsp;
+  </div>
+</div>
+
+
+#wrapper {
+  width: 128px;
+  height: 128px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.square {
+  width: 20px;
+  height: 20px;
+  float: left;
+  border: 4px black solid;
+  margin: 2px;
+}
+
+
+>>>>>>>>>>>>>>>>>
+
+
+(click)="squareClicked(square)"
+
+
+squareClicked(square) {
+  var newVal = (square.color == "White")?"Yellow":"White";
+  this.squares.update(square.$key, {'color': newVal});
+}
+
+
+>>>>>>>>>>>>>>>>>
+
+<div id="scoreBoard">
+  White: {{scoreWhite}}<br>
+  Yellow: {{scoreYellow}}
+</div>
+
+
+#scoreBoard {
+  width: 128px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  text-align: center;
+}
+
+
+scoreWhite = 0;
+scoreYellow = 0;
+
+
+>>>>>>>>>>>>>>>>>>
+
+
+this.squares.subscribe(updatedSquares=>{
+  var newScoreWhite = 0;
+  var newScoreYellow = 0;
+  updatedSquares.forEach(updatedSquare => {
+    if (updatedSquare.color == "White") {
+      newScoreWhite++;
+    } else if (updatedSquare.color == "Yellow") {
+      newScoreYellow++;
+    }
+  });
+  this.scoreWhite = newScoreWhite;
+  this.scoreYellow = newScoreYellow;
+})

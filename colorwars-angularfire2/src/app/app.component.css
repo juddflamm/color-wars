@@ -1,0 +1,23 @@
+#scoreBoard {
+  width: 128px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  text-align: center;
+}
+
+#wrapper {
+  width: 128px;
+  height: 128px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.square {
+  width: 20px;
+  height: 20px;
+  float: left;
+  border: 4px black solid;
+  margin: 2px;
+}

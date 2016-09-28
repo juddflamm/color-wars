@@ -1,3 +1,6 @@
+<title>Color Wars</title>
+
+
 squares: FirebaseListObservable<any[]>;
 constructor(af: AngularFire) {
   this.squares = af.database.list("/");

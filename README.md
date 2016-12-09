@@ -1,15 +1,6 @@
-color-wars
-==========
+#color-wars
 
-A Multi player game built with Firebase, AngularFire, and AngularJS.  The game is made up of a 4x4 grid of clickable squares.
+Color Wars is a Firebase demo for showing off it's Real Time, Collaborative, NoSQL DB, and CDN Hosting.
 
-This demo utilizes a public Firebase database, and is thus fully functional.
+Each folder in this repo is a separate implementation of Color Wars.  The only implementation in this repo today is an Angular 2 implementation using the AngularFire2 library.
 
-Color-wars is 100% client side, static assets.  After cloning this repo, simply host the files any way you prefer, to access them.
-
-If you have installed the "http-server" nodejs global module, you can run the app with these commands:
-```
-$ cd color-wars
-$ http-server
-```
-Then access the app via http://localhost:8080

@@ -13,14 +13,26 @@ Color Wars build with Firebase & Angular 2
 git clone https://github.com/kd7yva/color-wars.git
 cd color-wars/colorwars-angularfire2
 ```
+
 ###3. NPM Install Dependencies
 ```
 npm install
 ```
+
 ###4. Run The Demo
 ```
 ng serve
 ```
+
+###5. Deploy To Firebase
+1. Build the app: `ng build`
+2. Setup an account at (https://firebase.google.com)
+3. Create a new project at (https://console.firebase.google.com)
+4. Login to the Firebase CLI: `firebase login`
+5. Link your code to your new Firebase project for hosting: `firebase init`
+6. Deploy the app: `firebase deploy`
+7. View your deployed app: `firebase open` (scroll down to "Hosting: Deployed Site" and press enter)
+
 <hr>
 
 ##Setup An AngularFire2 App Yourself

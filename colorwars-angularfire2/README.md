@@ -23,7 +23,7 @@ ng serve
 ```
 <hr>
 
-##Setup An Angular2 / AngularFire2 App Yourself
+##Setup An AngularFire2 App Yourself
 Follow the instructions on the AngularFire2 site to create an empty Angular2 app, and then add to it AngularFire2:
 
 [AngularFire2 Install & Setup](https://github.com/angular/angularfire2/edit/master/docs/1-install-and-setup.md)

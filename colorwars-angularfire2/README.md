@@ -1,7 +1,5 @@
-#Color Wars Built with AngularFire 2
-
-##Setup
-<hr>
+#Color Wars - AngularFire 2
+Color Wars build with Firebase & Angular 2
 
 ###1. Install the Following Prerequisites:
 

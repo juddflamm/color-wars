@@ -1,31 +1,30 @@
-# ColorwarsAngularfire2
+#Color Wars Built with AngularFire 2
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.15.
+##Setup
+<hr>
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+###1. Install the Following Prerequisites:
 
-## Code scaffolding
+* Angular CLI: `npm install -g angular-cli`
+* Typings: `npm install -g typings`
+* TypeScript: `npm install -g typescript`
+* Firebase CLI: `npm install -g firebase-tools`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+###2. Clone This Repo
+```
+git clone https://github.com/kd7yva/color-wars.git
+cd color-wars/colorwars-angularfire2
+```
+###3. NPM Install Dependencies
+```
+npm install
+```
+###4. Run The Demo
+```
+ng serve
+```
+<hr>
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). 
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+##Setup An Angular2 / AngularFire2 App Yourself
+Follow the instructions on the AngularFire2 site to create an empty Angular2 app, and then add to it AngularFire2:
+[AngularFire2 Install & Setup](https://github.com/angular/angularfire2/edit/master/docs/1-install-and-setup.md)
